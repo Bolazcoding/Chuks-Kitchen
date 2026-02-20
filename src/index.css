@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Island+Moments&family=Jost&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  /* --font-serif-display: "DM Serif Display", serif; */
+
+  --color-primary-color: hsla(25, 100%, 55%, 1);
+  --color-soft-orange: hsla(29, 100%, 70%, 1);
+  --color-light-orange: hsla(29, 100%, 88%, 1);
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-soft-gray: hsla(220, 14%, 96%, 1);
+  --color-dark-orange: hsl(25, 100%, 39%);
+  /* --color-dark-orange: hsla(25, 100%, 55%, 0.3); */
+
+  --color-primary-blue: hsla(208, 79%, 51%, 1);
+  --color-soft-blue: hsla(207, 89%, 68%, 1);
+  --color-light-blue: hsla(205, 87%, 94%, 1);
+
+  --color-text-color: hsla(215, 28%, 17%, 1);
+  --color-text-dark-grey: hsla(215, 14%, 34%, 1);
+
+  font-family: "Inter", sans-serif;
+  color: var(--color-white);
+
+  --font-family-footer: "Jost", sans-serif;
+  --font-family-body: "Inter", sans-serif;
+  --font-family-heading: "Island Moments", cursive;
+  --font-family-footer-text: "Poppins", sans-serif;
+}
+
+@theme {
+  --color-primary-color: hsla(25, 100%, 55%, 1);
+  --color-soft-orange: hsla(29, 100%, 70%, 1);
+  --color-light-orange: hsla(29, 100%, 88%, 1);
+  --color-white: hsla(0, 0%, 100%, 1);
+  --color-soft-gray: hsla(220, 14%, 96%, 1);
+  --color-dark-orange: hsl(25, 100%, 39%);
+
+  --color-primary-blue: hsla(208, 79%, 51%, 1);
+  --color-soft-blue: hsla(207, 89%, 68%, 1);
+  --color-light-blue: hsla(205, 87%, 94%, 1);
+
+  --color-text-color: hsla(215, 28%, 17%, 1);
+  --color-text-dark-grey: hsla(215, 14%, 34%, 1);
+}
+
+@layer base {
+  .footerText {
+    font-family: var(--font-family-footer);
+    @apply text-white text-2xl leading-9;
+  }
+
+  .footerNavText {
+    font-family: var(--font-family-footer-text);
+    @apply text-[12px] leading-5;
+  }
+}
+
+@layer components {
+  .productStyle {
+    font-family: var(--font-family-heading);
+    @apply text-primary-color;
+  }
+}
