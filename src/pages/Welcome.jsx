@@ -7,7 +7,7 @@ function Welcome() {
   return (
     <>
       <div className="flex">
-        <Image src="/images/Rectangle-1.jpg" alt="welcome-img" />
+        <Logo />
         <div className="w-full pl-20 pr-15 pt-8">
           <div className="flex items-center justify-between">
             <h1 className="productStyle text-[40.81px] leading-[40.81px]">
