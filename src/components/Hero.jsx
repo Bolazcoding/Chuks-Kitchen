@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Image from "./Image";
 
 function Hero() {
@@ -14,14 +15,22 @@ function Hero() {
 
       <div className="absolute inset-0 bg-text-color/50"></div>
 
-      <div className="relative z-10 flex flex-col text-center items-center justify-center h-full px-18">
-        <h1 className="text-white text-5xl font-bold leading-15.25">
-          Chuks Kitchen
-        </h1>
-        <p className="text-2xl font-medium leading-8.5 mt-2.5">
-          Your journey to delicious, authentic Nigerian meals starts here. Sign
-          up or log in to order your favorites today!
-        </p>
+      <div className="maxWidth relative z-10 flex flex-col justify-center h-full">
+        <div className="w-3xl">
+          <h1 className="text-white text-5xl font-bold leading-15.25">
+            The Heart of Nigerian Home Cooking
+          </h1>
+          <p className="text-[32px] font-bold leading-10.5 mt-7">
+            Handcrafted with passion, delivered with care.
+          </p>
+          <Button
+            bgColor="bg-primary-color"
+            textColor="text-white"
+            className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold mt-7"
+          >
+            Discover what's new
+          </Button>
+        </div>
       </div>
     </div>
   );

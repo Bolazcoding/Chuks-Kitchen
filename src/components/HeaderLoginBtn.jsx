@@ -5,7 +5,7 @@ function HeaderLoginBtn() {
     <Button
       bgColor="bg-primary-color"
       textColor="text-white"
-      className="py-3.75 px-12 text-[16px] rounded-lg font-semibold"
+      className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold"
     >
       Login
     </Button>

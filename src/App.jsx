@@ -12,8 +12,8 @@ function App() {
         <BrowserRouter>
           {/* <Welcome /> */}
           {/* <SignIn /> */}
-          <SignUp />
-          {/* <HomePage /> */}
+          {/* <SignUp /> */}
+          <HomePage />
         </BrowserRouter>
       </KitchenProvider>
     </div>
