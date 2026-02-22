@@ -17,11 +17,11 @@ function NewMenu() {
         <div className="absolute inset-0 bg-text-color/50"></div>
 
         <div className="maxWidth relative z-10 flex flex-col justify-center h-full py-30 ">
-          <div className="w-3xl">
+          <div>
             <h1 className="text-white text-5xl font-extrabold leading-[140%]">
               Introducing Our New Menu Additions!
             </h1>
-            <p className="text-2xl font-semibold leading-8.5 mt-7">
+            <p className="text-2xl font-semibold leading-8.5 mt-7 w-2xl">
               Explore exciting new dishes, crafted with the freshest ingredients
               and authentic Nigerian flavors. Limited time offer!
             </p>
