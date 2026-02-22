@@ -4,8 +4,8 @@ import PageNav from "./PageNav";
 
 function Header() {
   return (
-    <header className="maxWidth bg-white py-4">
-      <div className="flex items-center justify-between">
+    <header className="bg-white py-4">
+      <div className="maxWidth flex items-center justify-between">
         <Logo />
         <PageNav />
         <HeaderLoginBtn />
