@@ -5,7 +5,7 @@ export const popularMeals = [
     description:
       "Our signature Jollof rice, cooked to perfection, served with succulent fried chicken.",
     price: "#3,500",
-    image: "/images/jollof.png",
+    image: "/images/jollof2.png",
   },
   {
     id: 2,
@@ -13,28 +13,28 @@ export const popularMeals = [
     description:
       "Hearty Egusi soup with tender goat meat, served with soft Eba.",
     price: "#3,500",
-    image: "/images/egusiSoup.png",
+    image: "/images/egusiSoup2.png",
   },
   {
     id: 3,
     title: "Pounded Yam & Edikaikong",
     description: "Traditional pounded yam with rich, leafy Edikaikong soup.",
     price: "#3,800",
-    image: "/images/poundedYam.jpg",
+    image: "/images/poundedYam2.png",
   },
   {
     id: 4,
     title: "Peppered Snail",
     description: "Spicy and savory peppered snail, perfect as a starter.",
     price: "#2,500",
-    image: "/images/snails.jpg",
+    image: "/images/snails2.png",
   },
   {
     id: 5,
     title: "Grilled Tilapia Fish",
     description: "Whole grilled tilapia seasoned with our special spices.",
     price: "#4,500",
-    image: "/images/tilapiaFish.jpg",
+    image: "/images/tilapiaFish2.png",
   },
   {
     id: 6,

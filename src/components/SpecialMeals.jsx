@@ -9,8 +9,8 @@ function SpecialMeals({ specials }) {
           key={special.id}
           className="bg-white rounded-2xl shadow-sm object-cover"
         >
-          <Image src={special.image} alt={special.title} />
-          <div className="py-7 px-6">
+          <Image src={special.image} alt={special.title} className="h-55.5" />
+          <div className="py-7 px-3.5">
             <div>
               <h3 className=" text-text-color text-2xl font-semibold leading-8.5 ">
                 {special.title}
@@ -26,7 +26,7 @@ function SpecialMeals({ specials }) {
               <Button
                 bgColor="bg-primary-color"
                 textColor="text-white"
-                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold"
+                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold cursor-pointer"
               >
                 Add to cart
               </Button>

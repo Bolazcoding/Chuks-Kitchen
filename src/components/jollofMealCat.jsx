@@ -3,31 +3,31 @@ import Button from "./Button";
 import { IonIcon } from "@ionic/react";
 import { add } from "ionicons/icons";
 
-function PopularMenuCat({ popularMeals }) {
+function jollofMealCat({ jollofRiceMeals }) {
   return (
-    <div className="grid grid-cols-3 gap-12 w-fit mt-12">
-      {popularMeals.map((popularMeal) => (
+    <div className="grid grid-cols-3 gap-12 w-fit mt-8">
+      {jollofRiceMeals.map((jollofRiceMeal) => (
         <div
-          key={popularMeal.id}
+          key={jollofRiceMeal.id}
           className="bg-white rounded-2xl shadow-sm object-cover"
         >
           <Image
-            src={popularMeal.image}
-            alt={popularMeal.title}
+            src={jollofRiceMeal.image}
+            alt={jollofRiceMeal.title}
             className="h-55.5"
           />
           <div className="py-7 px-3.5">
-            <div>
+            <div className="pr-12">
               <h3 className=" text-text-color text-2xl font-semibold leading-8.5 ">
-                {popularMeal.title}
+                {jollofRiceMeal.title}
               </h3>
               <p className="text-text-color text-[16px] leading-6 font-medium mt-2.5">
-                {popularMeal.description}
+                {jollofRiceMeal.description}
               </p>
             </div>
             <div className="flex items-center justify-between pt-10">
               <p className="text-primary-color text-[16px] leading-6 font-medium">
-                {popularMeal.price}
+                {jollofRiceMeal.price}
               </p>
               <Button
                 bgColor="bg-primary-color"
@@ -43,4 +43,4 @@ function PopularMenuCat({ popularMeals }) {
   );
 }
 
-export default PopularMenuCat;
+export default jollofMealCat;
