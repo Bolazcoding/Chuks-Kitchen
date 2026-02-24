@@ -5,6 +5,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
+import FoodDetails from "./pages/FoodDetails";
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
           {/* <SignIn /> */}
           {/* <SignUp /> */}
           {/* <HomePage /> */}
-          <MenuPage />
+          {/* <MenuPage /> */}
+          <FoodDetails />
         </BrowserRouter>
       </KitchenProvider>
     </div>

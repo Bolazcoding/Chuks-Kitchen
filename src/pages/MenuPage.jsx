@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import JollofMenuMeal from "../components/JollofMenuMeal";
 import MenuHero from "../components/MenuHero";
 import PopularMenuMeal from "../components/popularMenuMeal";
+import SwallowMenuMeal from "../components/swallowMenuMeal";
 import Main from "./Main";
 
 function MenuPage() {
@@ -13,6 +14,7 @@ function MenuPage() {
         <MenuHero />
         <PopularMenuMeal />
         <JollofMenuMeal />
+        <SwallowMenuMeal />
         <Footer />
       </Main>
     </div>
