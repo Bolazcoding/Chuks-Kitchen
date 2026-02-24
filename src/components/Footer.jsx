@@ -1,19 +1,19 @@
 import { NavLink } from "react-router-dom";
 import { IonIcon } from "@ionic/react";
 import { arrowUp } from "ionicons/icons";
+import Logo from "./Logo";
 
 function Footer() {
   return (
-    <footer className="bg-dark-orange py-16 px-20">
-      <div className="flex gap-30 ">
-        <div className="flex flex-col w-63">
-          <h1 className="productStyle text-[37.02px] leading-[37.02px]">
-            Chuks Kitchen
-          </h1>
+    <footer className="bg-dark-orange py-16 px-20 max-[1000px]:px-10 max-[1000px]:py-10">
+      <div className="flex gap-30 max-[1000px]:gap-12 max-[800px]:gap-8 max-[700px]:flex-col max-[700px]:text-center">
+        <div className="flex flex-col w-63 max-[700px]:w-full max-[700px]:px-12 max-[700px]:gap-2 max-[365px]:px-2.5 ">
+          <Logo />
           <p className="footerText">
             Bringing the authentic flavors of Nigerian home cooking to your
             table, with passion and care.
           </p>
+          <hr className="mt-5 text-soft-gray min-[700px]:hidden" />
         </div>
         <div>
           <nav>
@@ -72,11 +72,11 @@ function Footer() {
           </nav>
         </div>
       </div>
-      <div className="flex items-center justify-between mt-10">
+      <div className="flex items-center justify-between mt-10 max-[700px]:flex-col">
         <p className="footerNavText">
           &copy; 2020 Lift Media. All rights reserved.
         </p>
-        <div className="bg-primary-blue p-3 rounded-full w-12 h-12 flex items-center justify-center">
+        <div className="bg-primary-blue p-3 rounded-full w-12 h-12 flex items-center justify-center max-[700px]:mt-6 max-[700px]:w-10 max-[700px]:h-10">
           <IonIcon icon={arrowUp} className="text-white text-2xl" />
         </div>
       </div>

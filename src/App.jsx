@@ -13,11 +13,11 @@ function App() {
     <div>
       <KitchenProvider>
         <BrowserRouter>
-          {/* <Welcome /> */}
+          <Welcome />
           {/* <SignIn /> */}
           {/* <SignUp /> */}
           {/* <HomePage /> */}
-          <MenuPage />
+          {/* <MenuPage /> */}
           {/* <FoodDetails /> */}
           {/* <Cart /> */}
         </BrowserRouter>

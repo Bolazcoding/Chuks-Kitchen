@@ -2,19 +2,42 @@ import Image from "../components/Image";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
 import SignIn from "./SignIn";
+import Logo from "../components/Logo";
 
 function Welcome() {
   return (
     <>
-      <div className="flex">
-        <Logo />
-        <div className="w-full pl-20 pr-15 pt-8">
-          <div className="flex items-center justify-between">
-            <h1 className="productStyle text-[40.81px] leading-[40.81px]">
-              Chuks Kitchen
-            </h1>
+      <div className="flex max-[700px]:flex-col">
+        <div className="relative w-full max-[700px]:hidden">
+          <Image
+            src="/images/Rectangle-1.jpg"
+            alt="welcome-img"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+
+          {/* <div className="absolute inset-0 bg-primary-color/70"></div>
+
+      <div className="relative z-10 flex flex-col text-center items-center justify-center h-full px-18">
+        <h1 className="text-white text-5xl font-bold leading-15.25">
+          Chuks Kitchen
+        </h1>
+        <p className="text-2xl font-medium leading-8.5 mt-2.5">
+          Your journey to delicious, authentic Nigerian meals starts here. Sign
+          up or log in to order your favorites today!
+        </p>
+      </div> */}
+        </div>
+
+        <div className="w-full pl-20 pr-15 pt-8 max-[1000px]:pl-10 max-[1000px]:pr-8 max-[830px]:pl-6 max-[830px]:pr-6 max-[700px]:pl-7 max-[700px]:pr-7">
+          <Image
+            src="/images/mobileImageWelcome.png"
+            alt="welcome-img"
+            className=" w-full object-cover min-[700px]:hidden"
+          />
+          <div className="flex items-center justify-between max-[700px]:flex-col-reverse">
+            <Logo className="max-[700px]:mt-12" />
             <Button
-              className="py-3.75 px-12 text-[16px] rounded-lg font-semibold"
+              className="py-3.75 px-12 text-[16px] rounded-xl font-semibold max-[1000px]:px-8 max-[1000px]:py-2.75 max-[700px]:ml-auto max-[700px]:mt-7"
               textColor="text-primary-blue"
               border="border-2"
               onClick={SignIn}
@@ -22,7 +45,7 @@ function Welcome() {
               Sign In
             </Button>
           </div>
-          <div className="mt-25">
+          <div className="mt-25 max-[1000px]:mt-15 max-[700px]:mt-4">
             <h1 className="text-text-color font-bold text-[32px] leading-10">
               Your Authentic Taste of Nigeria
             </h1>
@@ -31,29 +54,29 @@ function Welcome() {
               We bring the rich culinary heritage of Nigeria right to your
               doorstep.
             </p>
-            <div className="grid grid-cols-2 mt-10 gap-6">
-              <div className="flex gap-2.5 items-center">
+            <div className="grid grid-cols-2 mt-10 gap-6 max-[700px]:grid-cols-1">
+              <div className="flex gap-2.5 items-center max-[700px]:bg-soft-gray max-[700px]:px-3 max-[700px]:py-2 max-[700px]:rounded-xl">
                 <Image
                   src="./images/fork-knife-fill.png"
-                  className="bg-light-orange p-2.5 rounded-lg"
+                  className="bg-light-orange p-2.5 rounded-xl"
                 />
                 <p className="text-text-color font-medium text-[16px] leading-6">
                   Freshly Prepared
                 </p>
               </div>
-              <div className="flex gap-2.5 items-center">
+              <div className="flex gap-2.5 items-center max-[700px]:bg-soft-gray max-[700px]:px-3 max-[700px]:py-2 max-[700px]:rounded-xl">
                 <Image
                   src="./images/fork-knife-fill.png"
-                  className="bg-light-orange p-2.5 rounded-lg"
+                  className="bg-light-orange p-2.5 rounded-xl"
                 />
                 <p className="text-text-color font-medium text-[16px] leading-6">
                   Support Local Business
                 </p>
               </div>
-              <div className="flex gap-2.75 items-center">
+              <div className="flex gap-2.75 items-center max-[700px]:bg-soft-gray max-[700px]:px-3 max-[700px]:py-2 max-[700px]:rounded-xl">
                 <Image
                   src="./images/card-fill.png"
-                  className="bg-light-orange p-2.5 rounded-lg"
+                  className="bg-light-orange p-2.5 rounded-xl"
                 />
                 <p className="text-text-color font-medium text-[16px] leading-6">
                   Fast & Reliable Delivery
@@ -61,14 +84,14 @@ function Welcome() {
               </div>
             </div>
             <Button
-              className="w-full font-semibold text-[16px] py-4.75 rounded-lg mt-10"
+              className="w-full font-semibold text-[16px] leading-6 py-4.75 rounded-xl mt-10"
               bgColor="bg-primary-color"
               textColor="text-white"
             >
               Start Your Order
             </Button>
             <Button
-              className="w-full font-semibold text-[16px] py-4.75 rounded-lg mt-10"
+              className="w-full font-semibold text-[16px] leading-6 py-4.75 rounded-xl mt-10 max-[830px]:mt-6"
               textColor="text-primary-blue"
               border="border-2"
             >
@@ -76,7 +99,8 @@ function Welcome() {
             </Button>
           </div>
 
-          <p className="text-text-color text-center mt-35 font-medium text-[15px]">
+          <p className="text-text-color text-center mt-35 mb-20 font-medium text-[15px] max-[830px]:mt-25">
+            <hr className="mb-5 text-soft-gray" />
             &copy; 2024 Chuks Kitchen.
             <span className="text-soft-blue pl-4 text-[14px] font-medium leading-5">
               Privacy Policy

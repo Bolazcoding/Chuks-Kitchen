@@ -3,7 +3,7 @@ import Button from "./Button";
 import { IonIcon } from "@ionic/react";
 import { add } from "ionicons/icons";
 
-function jollofMealCat({ jollofRiceMeals }) {
+function JollofMealCat({ jollofRiceMeals }) {
   return (
     <div className="grid grid-cols-3 gap-12 w-fit mt-8">
       {jollofRiceMeals.map((jollofRiceMeal) => (
@@ -43,4 +43,4 @@ function jollofMealCat({ jollofRiceMeals }) {
   );
 }
 
-export default jollofMealCat;
+export default JollofMealCat;
