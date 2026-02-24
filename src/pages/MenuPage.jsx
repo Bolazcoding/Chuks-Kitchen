@@ -2,8 +2,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import JollofMenuMeal from "../components/JollofMenuMeal";
 import MenuHero from "../components/MenuHero";
-import PopularMenuMeal from "../components/popularMenuMeal";
-import SwallowMenuMeal from "../components/swallowMenuMeal";
+import PopularMenuMeal from "../components/PopularMenuMeal";
+import SwallowMenuMeal from "../components/SwallowMenuMeal";
 import Main from "./Main";
 
 function MenuPage() {
