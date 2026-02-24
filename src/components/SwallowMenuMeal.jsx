@@ -1,6 +1,6 @@
 import { swallowMeals } from "../data/swallowMealType";
 import HeaderText from "./HeaderText";
-import SwallowMealCat from "./swallowMealCat";
+import SwallowMealCat from "./SwallowMealCat";
 
 function SwallowMenuMeal() {
   return (
