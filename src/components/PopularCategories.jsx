@@ -1,12 +1,11 @@
 import PopularCatMeal from "./PopularCatMeal";
 import { meals } from "../data/popularCateMeal";
+import HeaderText from "./HeaderText";
 
 function PopularCategories() {
   return (
     <section className="maxWidth mt-30">
-      <h2 className="text-[32px] text-text-color leading-10.5 font-bold text-center">
-        Popular Categories
-      </h2>
+      <HeaderText className="text-center">Popular Categories</HeaderText>
       <PopularCatMeal meals={meals} />
     </section>
   );

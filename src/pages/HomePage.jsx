@@ -5,6 +5,7 @@ import ChefSpecial from "../components/ChefSpecial";
 import Main from "./Main";
 import PopularCategories from "../components/PopularCategories";
 import NewMenu from "../components/NewMenu";
+import Search from "../components/Search";
 
 function HomePage() {
   return (
@@ -12,6 +13,7 @@ function HomePage() {
       <Header />
       <Main>
         <Hero />
+        <Search />
         <PopularCategories />
         <ChefSpecial />
         <NewMenu />

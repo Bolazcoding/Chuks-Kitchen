@@ -21,7 +21,7 @@ function SignUpForm() {
           <IonIcon icon={mail} className="text-icon-text text-xl" />
           <input
             type="email"
-            className="text-text-color text-[16px] leading-[140%] border-0 outline-none"
+            className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
             placeholder="name@gmail.com"
           />
         </div>
@@ -35,7 +35,7 @@ function SignUpForm() {
           <IonIcon icon={call} className="text-icon-text text-xl" />
           <input
             type="tel"
-            className="text-text-color text-[16px] leading-[140%] border-0 outline-none "
+            className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
             placeholder="8123340690"
           />
         </div>
@@ -50,7 +50,7 @@ function SignUpForm() {
             <Image src="./images/lockIcons.svg" alt="lockIcons" />
             <input
               type={showPassword ? "text" : "password"}
-              className="text-text-color text-[16px] leading-[140%] border-0 outline-none"
+              className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
               placeholder="******"
             />
           </div>
@@ -76,7 +76,7 @@ function SignUpForm() {
             <Image src="./images/lockIcons.svg" alt="lockIcons" />
             <input
               type={showConfirmPassword ? "text" : "password"}
-              className="text-text-color text-[16px] leading-[140%] border-0 outline-none"
+              className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
               placeholder="******"
             />
           </div>

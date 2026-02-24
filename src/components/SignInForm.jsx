@@ -17,7 +17,7 @@ function SignInForm() {
           <Image src="./images/mailIcons.svg" alt="mailIcons" />
           <input
             type="email"
-            className="text-text-color text-[16px] leading-[140%] border-0 outline-none"
+            className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
             placeholder="name@gmail.com"
           />
         </div>
@@ -32,7 +32,7 @@ function SignInForm() {
             <Image src="./images/lockIcons.svg" alt="lockIcons" />
             <input
               type={showPassword ? "text" : "password"}
-              className="text-text-color text-[16px] leading-[140%] border-0 outline-none"
+              className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
               placeholder="******"
             />
           </div>

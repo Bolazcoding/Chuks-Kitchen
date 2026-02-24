@@ -14,7 +14,7 @@ function PopularMenuCat({ popularMeals }) {
           <Image
             src={popularMeal.image}
             alt={popularMeal.title}
-            className="h-55.5"
+            className="h-55.5 rounded-t-2xl"
           />
           <div className="py-7 px-3.5">
             <div>

@@ -6,6 +6,7 @@ import SignUp from "./pages/SignUp";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
 import FoodDetails from "./pages/FoodDetails";
+import Cart from "./pages/Cart";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
           {/* <SignIn /> */}
           {/* <SignUp /> */}
           {/* <HomePage /> */}
-          {/* <MenuPage /> */}
-          <FoodDetails />
+          <MenuPage />
+          {/* <FoodDetails /> */}
+          {/* <Cart /> */}
         </BrowserRouter>
       </KitchenProvider>
     </div>

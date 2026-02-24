@@ -1,12 +1,11 @@
 import { popularMeals } from "../data/popularMeals";
+import HeaderText from "./HeaderText";
 import PopularMenuCat from "./popularMenuCat";
 
 function PopularMenuMeal() {
   return (
     <section className="maxWidth mt-30">
-      <h2 className="text-[32px] text-text-color leading-10.5 font-bold">
-        Popular Categories
-      </h2>
+      <HeaderText>Popular</HeaderText>
       <PopularMenuCat popularMeals={popularMeals} />
     </section>
   );

@@ -14,7 +14,7 @@ function jollofMealCat({ jollofRiceMeals }) {
           <Image
             src={jollofRiceMeal.image}
             alt={jollofRiceMeal.title}
-            className="h-55.5"
+            className="h-55.5 rounded-t-2xl"
           />
           <div className="py-7 px-3.5">
             <div className="pr-12">

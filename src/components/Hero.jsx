@@ -1,5 +1,6 @@
 import Button from "./Button";
 import Image from "./Image";
+import Search from "./Search";
 
 function Hero() {
   return (
