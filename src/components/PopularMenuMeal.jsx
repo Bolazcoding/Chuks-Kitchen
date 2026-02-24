@@ -1,6 +1,6 @@
 import { popularMeals } from "../data/popularMeals";
 import HeaderText from "./HeaderText";
-import PopularMenuCat from "./popularMenuCat";
+import PopularMenuCat from "./PopularMenuCat";
 
 function PopularMenuMeal() {
   return (
