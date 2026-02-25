@@ -27,7 +27,7 @@ function SignInForm() {
         <p className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5">
           Password
         </p>
-        <div className=" flex items-center justify-between border border-text-dark-grey/50 py-4 pl-4 pr-4 rounded-lg">
+        <div className=" flex items-center justify-between border border-text-dark-grey/50 py-4 pl-4 pr-4 rounded-lg max-[320px]:pr-5">
           <div className="flex items-center gap-2">
             <Image src="./images/lockIcons.svg" alt="lockIcons" />
             <input

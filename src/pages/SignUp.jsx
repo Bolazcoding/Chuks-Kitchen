@@ -9,9 +9,9 @@ import SignInBgEffect from "../components/SignInBgEffect";
 function SignUp() {
   return (
     <>
-      <div className="flex">
+      <div className="flex max-[700px]:flex-col">
         <SignInBgEffect />
-        <div className="w-full px-26 py-28 bg-soft-gray">
+        <div className="w-full px-26 py-28 bg-soft-gray max-[1000px]:px-14 max-[700px]:py-10 max-[700px]:bg-white max-[500px]:px-6 max-[320px]:px-2">
           <SignInHeader />
           <div className="mt-5">
             <SignUpForm />

@@ -13,9 +13,9 @@ function App() {
     <div>
       <KitchenProvider>
         <BrowserRouter>
-          <Welcome />
+          {/* <Welcome /> */}
           {/* <SignIn /> */}
-          {/* <SignUp /> */}
+          <SignUp />
           {/* <HomePage /> */}
           {/* <MenuPage /> */}
           {/* <FoodDetails /> */}
