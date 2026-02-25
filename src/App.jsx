@@ -15,8 +15,8 @@ function App() {
         <BrowserRouter>
           {/* <Welcome /> */}
           {/* <SignIn /> */}
-          <SignUp />
-          {/* <HomePage /> */}
+          {/* <SignUp /> */}
+          <HomePage />
           {/* <MenuPage /> */}
           {/* <FoodDetails /> */}
           {/* <Cart /> */}

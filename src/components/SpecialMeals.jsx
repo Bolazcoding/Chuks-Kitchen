@@ -3,14 +3,18 @@ import Image from "./Image";
 
 function SpecialMeals({ specials }) {
   return (
-    <div className="grid grid-cols-3 gap-12 w-fit mt-12">
+    <div className="grid grid-cols-3 gap-12 w-fit mt-12 max-[950px]:grid-cols-2 max-[950px]:justify-between ">
       {specials.map((special) => (
         <div
           key={special.id}
           className="bg-white rounded-2xl shadow-sm object-cover"
         >
-          <Image src={special.image} alt={special.title} className="h-55.5" />
-          <div className="py-7 px-3.5">
+          <Image
+            src={special.image}
+            alt={special.title}
+            className="h-55.5 rounded-t-2xl"
+          />
+          <div className="py-7 px-4">
             <div>
               <h3 className=" text-text-color text-2xl font-semibold leading-8.5 ">
                 {special.title}
@@ -26,7 +30,7 @@ function SpecialMeals({ specials }) {
               <Button
                 bgColor="bg-primary-color"
                 textColor="text-white"
-                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold cursor-pointer"
+                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold cursor-pointer max-[1150px]:px-8 max-[1150px]:py-2.75"
               >
                 Add to cart
               </Button>

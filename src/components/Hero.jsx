@@ -1,23 +1,22 @@
 import Button from "./Button";
 import Image from "./Image";
-import Search from "./Search";
 
 function Hero() {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full min-h-screen overflow-hidden">
       <Image
         src="/images/Welcome.svg"
         alt="hero-img"
         // width={1075}
         // height={589}
-        className="absolute object-cover"
-        // className="absolute inset-0 w-full h-auto object-cover"
+        // className="absolute object-cover"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
       <div className="absolute inset-0 bg-text-color/50"></div>
 
-      <div className="maxWidth relative z-10 flex flex-col justify-center h-full">
-        <div className="w-3xl">
+      <div className="maxWidth relative z-10 flex items-center h-full mt-45">
+        <div className="max-w-3xl">
           <h1 className="text-white text-5xl font-bold leading-15.25">
             The Heart of Nigerian Home Cooking
           </h1>

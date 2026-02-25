@@ -2,7 +2,7 @@ import Image from "./Image";
 
 function MenuHero() {
   return (
-    <div className="relative w-full h-[80vh] overflow-hidden ">
+    <div className="relative w-full min-h-[80vh] overflow-hidden ">
       <Image
         src="/images/explorehero.png"
         alt="hero-img"

@@ -2,7 +2,7 @@ import Image from "./Image";
 
 function PopularCatMeal({ meals }) {
   return (
-    <div className="grid grid-cols-3 gap-12 w-fit mt-12">
+    <div className="grid grid-cols-3 gap-12 w-fit mt-12 max-[950px]:grid-cols-2 max-[950px]:justify-between">
       {meals.map((meal) => (
         <div
           key={meal.id}
