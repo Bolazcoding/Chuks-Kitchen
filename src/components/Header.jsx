@@ -8,11 +8,16 @@ function Header() {
     <header className="bg-white py-4">
       <div className="maxWidth flex items-center justify-between">
         <Logo />
-        <ToggleMenu />
-        {/* <div className="min-[790px]:hidden">
+        <div className="min-[790px]:hidden">
+          <ToggleMenu />
+        </div>
+
+        <div className="max-[790px]:hidden">
           <PageNav />
+        </div>
+        <div className="max-[790px]:hidden">
           <HeaderLoginBtn />
-        </div> */}
+        </div>
       </div>
     </header>
   );

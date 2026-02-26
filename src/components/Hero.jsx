@@ -15,12 +15,12 @@ function Hero() {
 
       <div className="absolute inset-0 bg-text-color/50"></div>
 
-      <div className="maxWidth relative z-10 flex items-center h-full mt-45">
+      <div className="maxWidth relative z-10 flex items-center h-full mt-45 max-[510px]:mt-55">
         <div className="max-w-3xl">
-          <h1 className="text-white text-5xl font-bold leading-15.25">
+          <h1 className="text-white text-5xl font-bold leading-15.25 max-[510px]:text-[32px] max-[510px]:leading-10">
             The Heart of Nigerian Home Cooking
           </h1>
-          <p className="text-[32px] font-bold leading-10.5 mt-7">
+          <p className="text-[32px] font-bold leading-10.5 mt-7 max-[510px]:text-[16px] max-[510px]:leading-6">
             Handcrafted with passion, delivered with care.
           </p>
           <Button

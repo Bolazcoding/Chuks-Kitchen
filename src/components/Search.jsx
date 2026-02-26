@@ -22,7 +22,7 @@ function Search() {
 
           <input
             type="text"
-            className="w-full outline-none text-text-color text-2xl leading-8.5 font-medium placeholder:text-text-color"
+            className="w-full outline-none text-text-color text-2xl font-medium placeholder:text-text-color max-[600px]:text-[16px] leading-8.5 max-[600px]:font-normal max-[600]:leading-[140%] tracking-[-2%]"
             placeholder="What are you craving for today?"
           />
         </div>

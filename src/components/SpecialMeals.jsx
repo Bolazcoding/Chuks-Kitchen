@@ -3,7 +3,7 @@ import Image from "./Image";
 
 function SpecialMeals({ specials }) {
   return (
-    <div className="grid grid-cols-3 gap-12 w-fit mt-12 max-[950px]:grid-cols-2 max-[950px]:justify-between ">
+    <div className="grid grid-cols-3 gap-12 w-fit mt-12 max-[950px]:grid-cols-2 max-[950px]:justify-between max-[600px]:grid-cols-1">
       {specials.map((special) => (
         <div
           key={special.id}
@@ -12,7 +12,7 @@ function SpecialMeals({ specials }) {
           <Image
             src={special.image}
             alt={special.title}
-            className="h-55.5 rounded-t-2xl"
+            className=" rounded-t-2xl max-[600px]:w-full"
           />
           <div className="py-7 px-4">
             <div>

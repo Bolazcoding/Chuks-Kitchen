@@ -11,7 +11,8 @@
   --color-light-orange: hsla(29, 100%, 88%, 1);
   --color-white: hsla(0, 0%, 100%, 1);
   --color-soft-gray: hsla(220, 14%, 96%, 1);
-  --color-dark-orange: hsl(25, 67%, 30%);
+  --color-dark-orange: #543a26;
+  /* --color-dark-orange: hsl(25, 67%, 30%); */
   /* --color-dark-orange: hsl(25, 100%, 39%); */
 
   --color-primary-blue: hsla(208, 79%, 51%, 1);
