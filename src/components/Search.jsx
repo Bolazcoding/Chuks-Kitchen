@@ -2,7 +2,7 @@
 
 function Search() {
   return (
-    <div className="absolute -bottom-27.5 left-1/2 -translate-x-1/2 w-full px-4 z-20">
+    <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 w-full px-4 z-20">
       <div className="max-w-3xl mx-auto">
         <div className="flex items-center bg-white rounded-xl shadow-lg px-4 py-3">
           <svg
