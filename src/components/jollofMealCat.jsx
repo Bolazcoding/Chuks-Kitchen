@@ -5,7 +5,7 @@ import { add } from "ionicons/icons";
 
 function JollofMealCat({ jollofRiceMeals }) {
   return (
-    <div className="grid grid-cols-3 gap-12 w-fit mt-8">
+    <div className="grid grid-cols-3 gap-12 w-full mt-8 max-[950px]:grid-cols-2 max-[950px]:justify-between max-[600px]:grid-cols-1">
       {jollofRiceMeals.map((jollofRiceMeal) => (
         <div
           key={jollofRiceMeal.id}
@@ -14,9 +14,9 @@ function JollofMealCat({ jollofRiceMeals }) {
           <Image
             src={jollofRiceMeal.image}
             alt={jollofRiceMeal.title}
-            className="h-55.5 rounded-t-2xl"
+            className="w-full h-55.5 rounded-t-2xl"
           />
-          <div className="py-7 px-3.5">
+          <div className="py-7 px-4">
             <div className="pr-12">
               <h3 className=" text-text-color text-2xl font-semibold leading-8.5 ">
                 {jollofRiceMeal.title}

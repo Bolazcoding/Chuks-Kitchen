@@ -12,7 +12,7 @@ function SpecialMeals({ specials }) {
           <Image
             src={special.image}
             alt={special.title}
-            className=" rounded-t-2xl max-[600px]:w-full"
+            className="rounded-t-2xl max-[600px]:w-full"
           />
           <div className="py-7 px-4">
             <div>
