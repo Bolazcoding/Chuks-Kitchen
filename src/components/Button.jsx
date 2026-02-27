@@ -12,7 +12,7 @@ function Button({
   return (
     <button
       onClick={onClick}
-      className={`${bgColor} ${textColor} ${border} ${className}`}
+      className={`${bgColor} ${textColor} ${border} ${className} cursor-pointer`}
     >
       {children}
     </button>

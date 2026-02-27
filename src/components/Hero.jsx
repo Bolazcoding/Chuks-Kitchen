@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Image from "./Image";
 
 function Hero() {
+  const navigate = useNavigate();
+
   return (
     <div className="relative w-full min-h-screen overflow-hidden">
       <Image
@@ -24,6 +27,7 @@ function Hero() {
             Handcrafted with passion, delivered with care.
           </p>
           <Button
+            onClick={() => navigate("/explore")}
             bgColor="bg-primary-color"
             textColor="text-white"
             className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold mt-7"

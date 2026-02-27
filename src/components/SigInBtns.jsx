@@ -1,13 +1,17 @@
 import Image from "./Image";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 function SigInBtns() {
+  const navigate = useNavigate();
+
   return (
     <div>
       <Button
         className="w-full font-semibold text-[16px] py-4.75 rounded-lg mt-10 cursor-pointer"
         bgColor="bg-primary-color"
         textColor="text-white"
+        onClick={() => navigate("/home")}
       >
         Continue
       </Button>

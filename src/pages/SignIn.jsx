@@ -5,8 +5,10 @@ import SignInHeader from "../components/SignInHeader";
 import SignInForm from "../components/SignInForm";
 import SigInBtns from "../components/SigInBtns";
 import SignInBgEffect from "../components/SignInBgEffect";
+import { useNavigate } from "react-router-dom";
 
 function SignIn() {
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex max-[700px]:flex-col">
@@ -21,7 +23,10 @@ function SignIn() {
               textColor="text-text-dark-grey"
             >
               Don't have an account?{" "}
-              <Button className="cursor-pointer" textColor="text-primary-blue">
+              <Button
+                onClick={() => navigate("/sign-up")}
+                textColor="text-primary-blue"
+              >
                 Create an account
               </Button>
             </TextBox>

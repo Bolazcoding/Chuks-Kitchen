@@ -55,6 +55,7 @@
   .navText {
     @apply text-text-color text-[16px] leading-6 font-medium max-[790px]:text-xl max-[790px]:text-white;
   }
+
   .footerText {
     font-family: var(--font-family-footer);
     @apply text-white text-2xl leading-9 max-[830px]:text-[20px];

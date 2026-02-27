@@ -1,10 +1,17 @@
 import Image from "../components/Image";
 import Button from "../components/Button";
 import Footer from "../components/Footer";
-import SignIn from "./SignIn";
 import Logo from "../components/Logo";
+import { useNavigate } from "react-router-dom";
 
 function Welcome() {
+  const navigate = useNavigate();
+
+  // const handleStart = ({ setIsOnboarded }) => {
+  //   localStorage.setItem("onboardingComplete", "true");
+  //   setIsOnboarded(true);
+  //   navigate("/home");
+  // };
   return (
     <>
       <div className="flex max-[700px]:flex-col">
@@ -40,7 +47,8 @@ function Welcome() {
               className="py-3.75 px-12 text-[16px] rounded-xl font-semibold max-[1000px]:px-8 max-[1000px]:py-2.75 max-[700px]:ml-auto max-[700px]:mt-7"
               textColor="text-primary-blue"
               border="border-2"
-              onClick={SignIn}
+              onClick={() => navigate("/login")}
+              // onClick={handleStart}
             >
               Sign In
             </Button>
