@@ -1,4 +1,4 @@
-import JollofMealCat from "./jollofMealCat";
+import JollofMealCat from "./JollofMealCat";
 import { jollofRiceMeals } from "../data/jollofRiceType";
 import HeaderText from "./HeaderText";
 
