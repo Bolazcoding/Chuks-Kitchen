@@ -14,12 +14,13 @@ function PopularMenuCat({ popularMeals }) {
           key={popularMeal.id}
           className="bg-white rounded-2xl shadow-sm max-[600px]:flex max-[600px]:rounded-lg"
         >
-          <Image
-            src={popularMeal.image}
-            alt={popularMeal.title}
-            className="w-full h-55.5 object-cover rounded-t-2xl max-[600px]:h-full max-[600px]:w-32 max-[600px]:rounded-xl max-[600px]:px-2 max-[600px]:py-2 cursor-pointer"
-            onClick={() => navigate("/foodDetails")}
-          />
+          <Button onClick={() => navigate("/foodDetails")}>
+            <Image
+              src={popularMeal.image}
+              alt={popularMeal.title}
+              className="w-full h-55.5 object-cover rounded-t-2xl max-[600px]:h-full max-[600px]:w-32 max-[600px]:rounded-xl max-[600px]:px-2 max-[600px]:py-2 cursor-pointer"
+            />
+          </Button>
           <div className="py-7 px-4 w-full max-[600px]:px-2 max-[600px]:py-2">
             <div>
               <h3

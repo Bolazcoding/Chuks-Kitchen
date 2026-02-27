@@ -12,12 +12,13 @@ function SpecialMeals({ specials }) {
           key={special.id}
           className="bg-white rounded-2xl shadow-sm object-cover "
         >
-          <Image
-            src={special.image}
-            alt={special.title}
-            className="rounded-t-2xl max-[600px]:w-full cursor-pointer"
-            onClick={() => navigate("/foodDetails")}
-          />
+          <Button onClick={() => navigate("/foodDetails")}>
+            <Image
+              src={special.image}
+              alt={special.title}
+              className="rounded-t-2xl max-[600px]:w-full cursor-pointer"
+            />
+          </Button>
           <div className="py-7 px-4">
             <div>
               <h3
