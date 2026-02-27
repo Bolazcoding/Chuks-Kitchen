@@ -4,7 +4,7 @@ import CartDetails from "./CartDetails";
 
 function CartMenu() {
   return (
-    <section className="maxWidth bg-white border-[0.5px] border-icon-text/30 rounded-[5px] px-3 py-6 my-25">
+    <section className="maxWidth bg-white border-[0.5px] border-icon-text/30 rounded-[5px] px-3 py-6 my-25 max-[630px]:my-12">
       <HeaderText>Your Cart</HeaderText>
       <CartDetails carts={carts} />
     </section>

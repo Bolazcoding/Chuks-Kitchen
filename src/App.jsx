@@ -18,8 +18,8 @@ function App() {
           {/* <SignUp /> */}
           {/* <HomePage /> */}
           {/* <MenuPage /> */}
-          <FoodDetails />
-          {/* <Cart /> */}
+          {/* <FoodDetails /> */}
+          <Cart />
         </BrowserRouter>
       </KitchenProvider>
     </div>

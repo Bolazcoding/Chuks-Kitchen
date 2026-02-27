@@ -1,6 +1,6 @@
 import { jollofRiceMeals } from "../data/jollofRiceType";
-import JollofMealCat from "./JollofMealCat";
 import HeaderText from "./HeaderText";
+import JollofMealCat from "./JollofMealCat";
 
 function JollofMenuMeal() {
   return (
