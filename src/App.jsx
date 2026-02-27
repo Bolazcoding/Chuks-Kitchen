@@ -17,8 +17,8 @@ function App() {
           {/* <SignIn /> */}
           {/* <SignUp /> */}
           {/* <HomePage /> */}
-          <MenuPage />
-          {/* <FoodDetails /> */}
+          {/* <MenuPage /> */}
+          <FoodDetails />
           {/* <Cart /> */}
         </BrowserRouter>
       </KitchenProvider>

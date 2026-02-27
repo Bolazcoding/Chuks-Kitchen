@@ -3,11 +3,11 @@ import { memo } from "react";
 const FoodDetailsTextBox = memo(
   ({ children, className = "", textColor = "" }) => {
     return (
-      <span
+      <p
         className={`text-[16px] text-text-dark-grey leading-[-140%] tracking-[-2%] ${textColor} ${className} `}
       >
         {children}
-      </span>
+      </p>
     );
   },
 );
