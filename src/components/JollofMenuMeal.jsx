@@ -1,5 +1,5 @@
-import JollofMealCat from "./JollofMealCat";
 import { jollofRiceMeals } from "../data/jollofRiceType";
+import JollofMealCat from "./JollofMealCat";
 import HeaderText from "./HeaderText";
 
 function JollofMenuMeal() {
