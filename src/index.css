@@ -53,7 +53,7 @@
 
 @layer base {
   .navText {
-    @apply text-text-color text-[16px] leading-6 font-medium;
+    @apply text-text-color text-[16px] leading-6 font-medium max-[790px]:text-2xl max-[790px]:text-white;
   }
   .footerText {
     font-family: var(--font-family-footer);

@@ -5,13 +5,12 @@ import ToggleMenu from "./ToggleMenu";
 
 function Header() {
   return (
-    <header className="bg-white py-4">
+    <header className="sticky top-0 z-50 bg-white shadow-md py-4">
       <div className="maxWidth flex items-center justify-between">
         <Logo />
         <div className="min-[790px]:hidden">
           <ToggleMenu />
         </div>
-
         <div className="max-[790px]:hidden">
           <PageNav />
         </div>
