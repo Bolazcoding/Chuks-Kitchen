@@ -8,9 +8,6 @@ function NewMenu() {
         <Image
           src="/images/newMenu.png"
           alt="newMenu"
-          // width={1075}
-          // height={589}
-          //   className="absolute object-cover"
           className="absolute inset-0 w-full h-full object-cover"
         />
 
