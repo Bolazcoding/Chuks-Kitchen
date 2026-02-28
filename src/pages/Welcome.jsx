@@ -107,7 +107,7 @@ function Welcome() {
             </Button>
           </div>
 
-          <p className="text-text-color text-center mt-35 mb-20 font-medium text-[15px] max-[830px]:mt-25">
+          <div className="text-text-color text-center mt-35 mb-20 font-medium text-[15px] max-[830px]:mt-25">
             <hr className="mb-5 text-soft-gray" />
             &copy; 2024 Chuks Kitchen.
             <span className="text-soft-blue pl-4 text-[14px] font-medium leading-5">
@@ -116,7 +116,7 @@ function Welcome() {
             <span className="text-soft-blue pl-4 text-[14px] font-medium leading-5">
               Terms of Service
             </span>
-          </p>
+          </div>
         </div>
       </div>
       <Footer />

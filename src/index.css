@@ -76,4 +76,8 @@
   .maxWidth {
     @apply max-w-[93%] mx-auto;
   }
+
+  .navTextHover {
+    @apply hover:text-primary-color;
+  }
 }

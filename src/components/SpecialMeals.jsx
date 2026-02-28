@@ -39,7 +39,7 @@ function SpecialMeals({ specials }) {
                 onClick={() => navigate("/cart")}
                 bgColor="bg-primary-color"
                 textColor="text-white"
-                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold max-[1150px]:px-8 max-[1150px]:py-2.75"
+                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold hover:bg-soft-orange max-[1150px]:px-8 max-[1150px]:py-2.75"
               >
                 Add to cart
               </Button>

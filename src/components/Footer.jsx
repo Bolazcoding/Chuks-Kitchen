@@ -19,19 +19,19 @@ function Footer() {
           <nav>
             <h2 className="footerText">Quick Links</h2>
             <ul className="footerNavText flex flex-col gap-2.5 pt-3">
-              <li>
+              <li className="navTextHover">
                 <NavLink>Home</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>Explore</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>My Order</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>Account</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>Contact</NavLink>
               </li>
             </ul>
@@ -45,7 +45,7 @@ function Footer() {
               <li>
                 <NavLink>+234 801 234 5678</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>hello@chukskitchen.com</NavLink>
               </li>
               <li>123 Taste Bivd, Lagos, Nigeria</li>
@@ -56,16 +56,16 @@ function Footer() {
         <div>
           <nav>
             <ul className=" footerNavText flex flex-col gap-2.5">
-              <li>
+              <li className="navTextHover">
                 <NavLink>Facebook</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>Twitter</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>Linkedin</NavLink>
               </li>
-              <li>
+              <li className="navTextHover">
                 <NavLink>Instagram</NavLink>
               </li>
             </ul>

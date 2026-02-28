@@ -40,7 +40,7 @@ function PopularMenuCat({ popularMeals }) {
               <Button
                 onClick={() => navigate("/cart")}
                 bgColor="bg-primary-color"
-                className="rounded-full w-8 h-8 flex items-center justify-center max-[600px]:w-5 max-[600px]:h-5"
+                className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-soft-orange max-[600px]:w-5 max-[600px]:h-5"
               >
                 <IonIcon icon={add} className="text-white text-3xl " />
               </Button>

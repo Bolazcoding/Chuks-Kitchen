@@ -28,7 +28,7 @@ function NewMenu() {
             <Button
               bgColor="bg-primary-color"
               textColor="text-white"
-              className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold mt-7"
+              className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold mt-7 hover:bg-soft-orange"
             >
               Discover what's new
             </Button>
