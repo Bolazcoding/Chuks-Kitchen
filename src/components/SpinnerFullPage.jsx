@@ -5,7 +5,7 @@ function SpinnerFullPage() {
   return (
     <div className={styles.spinnerFullpage}>
       <Spinner />
-      <h1 className="text-text-color">Loading...</h1>
+      <h1 className="text-white">Loading...</h1>
     </div>
   );
 }

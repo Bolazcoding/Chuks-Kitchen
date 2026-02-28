@@ -2,7 +2,6 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { KitchenProvider } from "./contexts/KitchenContext";
 import SpinnerFullPage from "./components/SpinnerFullPage";
-import RouteProgress from "./components/RouteProgress";
 // import Welcome from "./pages/Welcome";
 // import SignIn from "./pages/SignIn";
 // import SignUp from "./pages/SignUp";
@@ -33,7 +32,6 @@ function App() {
     <div>
       <KitchenProvider>
         <BrowserRouter>
-          <RouteProgress />
           <Suspense fallback={<SpinnerFullPage />}>
             <Routes>
               <Route path="/" element={<Welcome />} />

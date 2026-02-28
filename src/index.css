@@ -4,8 +4,6 @@
 @import "tailwindcss";
 
 :root {
-  /* --font-serif-display: "DM Serif Display", serif; */
-
   --color-primary-color: hsla(25, 100%, 55%, 1);
   --color-soft-orange: hsla(29, 100%, 70%, 1);
   --color-light-orange: hsla(29, 100%, 88%, 1);
