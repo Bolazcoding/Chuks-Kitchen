@@ -1,16 +1,80 @@
-# React + Vite
+# Project Overview
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Chuks Kitchen is a web-based food ordering application designed to showcase Nigerian home-style meals and allow users to browse food items, view details, and interact with the platform through a modern user interface.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React.js – For building reusable UI components
 
-## React Compiler
+- Tailwind CSS – For styling and responsive design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Node.js – Runtime environment (for development server)
 
-## Expanding the ESLint configuration
+- npm – For managing project dependencies
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Links
+
+- Solution URL: https://github.com/Bolazcoding/Chuks-Kitchen
+- Live Site URL: https://mobolaji-chuks-kitchen.vercel.app/
+
+## Steps to Run the Project Locally
+
+1. Clone the Repository
+   Open your terminal and run:
+   git clone https://github.com/Bolazcoding/Chuks-Kitchen.git
+
+2. Navigate into the Project Folder
+   cd Chuks-Kitchen
+
+3. Install Dependencies
+   npm install
+
+This will install all required packages listed in the package.json file.
+
+4. Start the Development Server
+   npm run dev
+
+5. Open in Browser
+
+After running the command, the application will start on:
+http://localhost:3000
+
+Open this link in your browser to view the application.
+
+## Project Structure Overview
+
+- /app or /pages – Contains the main application pages and routing structure
+
+- /components – Reusable UI components (Navbar, Hero section, Food cards, etc.)
+
+- /public – Static assets such as images
+
+- /styles – Global styling configuration
+
+- package.json – Lists dependencies and scripts
+
+## Build for Production
+
+- To create an optimized production build, run:
+  npm run build
+
+- To start the production server:
+  npm start
+
+### Screenshot
+
+## Homepage
+
+![Homepage Screenshot](./public/images/HomePage.png)
+
+## Menu Page
+
+![Menupage Screenshot](./public/images/MenuPage.png)
+
+## Food Details Page
+
+![FoodDetails Screenshot](./public/images/FoodDetails.png)
+
+## Author
+
+Developed by Mobolaji Adelabu (Bolazcoding)
