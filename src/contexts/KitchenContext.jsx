@@ -11,7 +11,7 @@ function KitchenProvider({ children }) {
 // function useKitchen() {
 //   const context = useContext(KitchenContext);
 //   if (context === undefined)
-//     throw new Error("CitiesContext was used outside the CitiesProvider");
+//     throw new Error("KitchenContext was used outside the KitchenProvider");
 //   return context;
 // }
 

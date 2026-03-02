@@ -7,10 +7,10 @@ import PopularCategories from "../components/PopularCategories";
 import NewMenu from "../components/NewMenu";
 import Search from "../components/Search";
 
-function HomePage() {
+function HomePage({ setLoggedIn }) {
   return (
     <div className="bg-soft-gray">
-      <Header />
+      <Header setLoggedIn={setLoggedIn} />
       <Main>
         <Hero />
         <Search />

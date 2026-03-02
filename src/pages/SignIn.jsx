@@ -7,7 +7,7 @@ import SigInBtns from "../components/SigInBtns";
 import SignInBgEffect from "../components/SignInBgEffect";
 import { useNavigate } from "react-router-dom";
 
-function SignIn() {
+function SignIn({ setLoggedIn }) {
   const navigate = useNavigate();
   return (
     <>
@@ -16,7 +16,7 @@ function SignIn() {
         <div className="w-full px-26 py-40 bg-soft-gray max-[1000px]:px-14 max-[700px]:py-10 max-[700px]:bg-white max-[400px]:px-6 max-[320px]:px-2">
           <SignInHeader />
           <div className="mt-5">
-            <SignInForm />
+            <SignInForm setLoggedIn={setLoggedIn} />
             <SigInBtns />
             <TextBox
               className="text-center text-[12px] leading-4 mt-4"

@@ -1,7 +1,8 @@
-import { lazy, Suspense } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { lazy, Suspense, useEffect, useState } from "react";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { KitchenProvider } from "./contexts/KitchenContext";
 import SpinnerFullPage from "./components/SpinnerFullPage";
+
 // import Welcome from "./pages/Welcome";
 // import SignIn from "./pages/SignIn";
 // import SignUp from "./pages/SignUp";
@@ -19,14 +20,18 @@ const FoodDetails = lazy(() => import("./pages/FoodDetails"));
 const Cart = lazy(() => import("./pages/Cart"));
 
 function App() {
-  // const [isOnboarded, setIsOnboarded] = useState(false);
+  const [onboarded, setOnboarded] = useState(false);
+  const [signedUp, setSignedUp] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
-  // useEffect(() => {
-  //   const status = localStorage.getItem("onboardingComplete");
-  //   if (status === "true") {
-  //     setIsOnboarded(true);
-  //   }
-  // }, []);
+  useEffect(function () {
+    async function account() {
+      setOnboarded(localStorage.getItem("onboardingComplete") === "true");
+      setSignedUp(localStorage.getItem("isSignedUp") === "true");
+      setLoggedIn(localStorage.getItem("isLoggedIn") === "true");
+    }
+    account();
+  }, []);
 
   return (
     <div>
@@ -34,23 +39,71 @@ function App() {
         <BrowserRouter>
           <Suspense fallback={<SpinnerFullPage />}>
             <Routes>
-              <Route path="/" element={<Welcome />} />
-              <Route path="/login" element={<SignIn />} />
-              <Route path="/sign-up" element={<SignUp />} />
-              {/* <Route
-              path="/"
-              element={
-                isOnboarded ? (
-                  <Navigate to="/home" />
+              <Route
+                path="/"
+                element={
+                  !onboarded ? (
+                    <Navigate to="/onboarding" />
+                  ) : loggedIn ? (
+                    <Navigate to="/home" />
+                  ) : signedUp ? (
+                    <Navigate to="/login" />
                   ) : (
-                  <Welcome setIsOnboarded={setIsOnboarded} />
-                )
+                    <Navigate to="/sign-up" />
+                  )
                 }
-            /> */}
-              <Route path="/home" element={<HomePage />} />
-              <Route path="/explore" element={<MenuPage />} />
-              <Route path="/foodDetails" element={<FoodDetails />} />
-              <Route path="/cart" element={<Cart />} />
+              />
+
+              {/* <Route
+                path="/"
+                element={
+                  !onboarded ? (
+                    <Navigate to="/onboarding" />
+                  ) : !signedUp ? (
+                    <Navigate to="/signup" />
+                  ) : (
+                    <Navigate to="/home" />
+                  )
+                }
+              /> */}
+
+              <Route
+                path="/onboarding"
+                element={<Welcome setOnboarded={setOnboarded} />}
+              />
+              <Route
+                path="/sign-up"
+                element={
+                  <SignUp setSignedUp={setSignedUp} setLoggedIn={setLoggedIn} />
+                }
+              />
+              <Route
+                path="/login"
+                element={<SignIn setLoggedIn={setLoggedIn} />}
+              />
+
+              <Route
+                path="/home"
+                element={
+                  loggedIn ? (
+                    <HomePage setLoggedIn={setLoggedIn} />
+                  ) : (
+                    <Navigate to="/login" />
+                  )
+                }
+              />
+              <Route
+                path="/explore"
+                element={<MenuPage setLoggedIn={setLoggedIn} />}
+              />
+              <Route
+                path="/foodDetails"
+                element={<FoodDetails setLoggedIn={setLoggedIn} />}
+              />
+              <Route
+                path="/cart"
+                element={<Cart setLoggedIn={setLoggedIn} />}
+              />
             </Routes>
           </Suspense>
         </BrowserRouter>

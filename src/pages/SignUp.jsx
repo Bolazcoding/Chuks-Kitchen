@@ -5,8 +5,11 @@ import SignInHeader from "../components/SignInHeader";
 import SigInBtns from "../components/SigInBtns";
 import SignUpForm from "../components/SignUpForm";
 import SignInBgEffect from "../components/SignInBgEffect";
+import { useNavigate } from "react-router-dom";
 
-function SignUp() {
+function SignUp({ setSignedUp, setLoggedIn }) {
+  const navigate = useNavigate();
+
   return (
     <>
       <div className="flex max-[700px]:flex-col">
@@ -14,14 +17,18 @@ function SignUp() {
         <div className="w-full px-26 py-28 bg-soft-gray max-[1000px]:px-14 max-[700px]:py-10 max-[700px]:bg-white max-[500px]:px-6 max-[320px]:px-2">
           <SignInHeader />
           <div className="mt-5">
-            <SignUpForm />
+            <SignUpForm setSignedUp={setSignedUp} setLoggedIn={setLoggedIn} />
             <SigInBtns />
             <TextBox
               className="text-center text-[12px] leading-4 mt-4"
               textColor="text-text-dark-grey"
             >
               Already have an account?{" "}
-              <Button className="cursor-pointer" textColor="text-primary-blue">
+              <Button
+                className="cursor-pointer"
+                textColor="text-primary-blue"
+                onClick={() => navigate("/login")}
+              >
                 Sign In
               </Button>
             </TextBox>

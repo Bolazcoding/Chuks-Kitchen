@@ -1,36 +1,65 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Image from "./Image";
 import { IonIcon } from "@ionic/react";
 import { eyeOff } from "ionicons/icons";
 import { eye } from "ionicons/icons";
 import { mail } from "ionicons/icons";
 import { call } from "ionicons/icons";
+import Image from "./Image";
 import Button from "./Button";
 
-function SignUpForm() {
+function SignUpForm({ setSignedUp, setLoggedIn }) {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+
+    // Save fake account
+    localStorage.setItem("savedEmail", email);
+    localStorage.setItem("savedPassword", password);
+
+    localStorage.setItem("isSignedUp", "true");
+    localStorage.setItem("isLoggedIn", "true");
+
+    setSignedUp(true);
+    setLoggedIn(true);
+
+    navigate("/home");
+  };
+
   return (
-    <div>
+    <form onSubmit={handleSignUp}>
       <div>
-        <p className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5">
+        <label
+          htmlFor="email"
+          className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5"
+        >
           Email or phone number
-        </p>
+        </label>
         <div className="flex items-center gap-2 border border-text-dark-grey/50 py-4 pl-4 rounded-lg">
           <IonIcon icon={mail} className="text-icon-text text-xl" />
           <input
             type="email"
             className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
             placeholder="name@gmail.com"
+            onChange={(e) => setEmail(e.target.value)}
+            required
           />
         </div>
       </div>
 
       <div className="mt-4">
-        <p className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5">
+        <label
+          htmlFor="tel"
+          className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5"
+        >
           Phone number
-        </p>
+        </label>
         <div className="flex items-center gap-2 border border-text-dark-grey/50 py-4 pl-4 rounded-lg">
           <IonIcon icon={call} className="text-icon-text text-xl" />
           <input
@@ -42,9 +71,12 @@ function SignUpForm() {
       </div>
 
       <div className="mt-4">
-        <p className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5">
+        <label
+          htmlFor="password"
+          className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5"
+        >
           Password
-        </p>
+        </label>
         <div className=" flex items-center justify-between border border-text-dark-grey/50 py-4 pl-4 pr-4 rounded-lg">
           <div className="flex items-center gap-2">
             <Image src="./images/lockIcons.svg" alt="lockIcons" />
@@ -52,9 +84,12 @@ function SignUpForm() {
               type={showPassword ? "text" : "password"}
               className="text-text-color text-[16px] leading-[140%] border-0 outline-none placeholder:text-black "
               placeholder="******"
+              onChange={(e) => setPassword(e.target.value)}
+              required
             />
           </div>
           <Button
+            type="button"
             className="flex cursor-pointer"
             onClick={() => setShowPassword(!showPassword)}
           >
@@ -68,9 +103,12 @@ function SignUpForm() {
       </div>
 
       <div className="mt-4">
-        <p className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5">
+        <label
+          htmlFor="password"
+          className="text-text-dark-grey text-[14px] leading-5 font-medium pb-1.5"
+        >
           Confirm Password
-        </p>
+        </label>
         <div className=" flex items-center justify-between border border-text-dark-grey/50 py-4 pl-4 pr-4 rounded-lg">
           <div className="flex items-center gap-2">
             <Image src="./images/lockIcons.svg" alt="lockIcons" />
@@ -81,6 +119,7 @@ function SignUpForm() {
             />
           </div>
           <Button
+            type="button"
             className="flex cursor-pointer"
             onClick={() => setShowConfirmPassword(!showConfirmPassword)}
           >
@@ -92,7 +131,16 @@ function SignUpForm() {
           </Button>
         </div>
       </div>
-    </div>
+      <Button
+        className="w-full font-semibold text-[16px] py-4.75 rounded-lg mt-10 cursor-pointer"
+        bgColor="bg-primary-color"
+        textColor="text-white"
+        type="submit"
+        // onClick={() => navigate("/home")}
+      >
+        Continue
+      </Button>
+    </form>
   );
 }
 

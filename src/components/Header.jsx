@@ -4,7 +4,7 @@ import Logo from "./Logo";
 import PageNav from "./PageNav";
 import ToggleMenu from "./ToggleMenu";
 
-function Header() {
+function Header({ setLoggedIn }) {
   const navigate = useNavigate();
 
   return (
@@ -18,7 +18,7 @@ function Header() {
           <PageNav />
         </div>
         <div className="max-[790px]:hidden">
-          <HeaderLoginBtn />
+          <HeaderLoginBtn setLoggedIn={setLoggedIn} />
         </div>
       </div>
     </header>

@@ -1,25 +1,17 @@
 import Image from "./Image";
 import Button from "./Button";
-import { useNavigate } from "react-router-dom";
 
 function SigInBtns() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div>
-      <Button
-        className="w-full font-semibold text-[16px] py-4.75 rounded-lg mt-10 cursor-pointer"
-        bgColor="bg-primary-color"
-        textColor="text-white"
-        onClick={() => navigate("/home")}
-      >
-        Continue
-      </Button>
       <p className="text-text-color text-[12px] font-normal text-center leading-4 py-3">
         Or continue with
       </p>
 
       <Button
+        type="button"
         className="w-full font-normal text-[14px] py-3 rounded-lg mt-7 bg-white cursor-pointer"
         textColor="text-text-dark-grey"
         border="border"
@@ -30,6 +22,7 @@ function SigInBtns() {
         </span>
       </Button>
       <Button
+        type="button"
         className="w-full font-normal text-[14px] py-3 rounded-lg mt-7 bg-white cursor-pointer"
         textColor="text-text-dark-grey"
         border="border"

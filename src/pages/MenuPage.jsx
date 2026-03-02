@@ -6,10 +6,10 @@ import PopularMenuMeal from "../components/PopularMenuMeal";
 import SwallowMenuMeal from "../components/SwallowMenuMeal";
 import Main from "./Main";
 
-function MenuPage() {
+function MenuPage({ setLoggedIn }) {
   return (
     <div className="bg-soft-gray">
-      <Header />
+      <Header setLoggedIn={setLoggedIn} />
       <Main>
         <MenuHero />
         <PopularMenuMeal />

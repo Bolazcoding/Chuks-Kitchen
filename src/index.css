@@ -4,14 +4,12 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary-color: hsla(25, 100%, 55%, 1);
+  /* --color-primary-color: hsla(25, 100%, 55%, 1);
   --color-soft-orange: hsla(29, 100%, 70%, 1);
   --color-light-orange: hsla(29, 100%, 88%, 1);
   --color-white: hsla(0, 0%, 100%, 1);
   --color-soft-gray: hsla(220, 14%, 96%, 1);
   --color-dark-orange: #543a26;
-  /* --color-dark-orange: hsl(25, 67%, 30%); */
-  /* --color-dark-orange: hsl(25, 100%, 39%); */
 
   --color-primary-blue: hsla(208, 79%, 51%, 1);
   --color-soft-blue: hsla(207, 89%, 68%, 1);
@@ -20,7 +18,7 @@
   --color-text-color: hsla(215, 28%, 17%, 1);
   --color-text-dark-grey: hsla(215, 14%, 34%, 1);
 
-  --color-icon-text: hsla(0, 0%, 38%, 1);
+  --color-icon-text: hsla(0, 0%, 38%, 1); */
 
   font-family: "Inter", sans-serif;
   color: var(--color-white);
@@ -37,7 +35,7 @@
   --color-light-orange: hsla(29, 100%, 88%, 1);
   --color-white: hsla(0, 0%, 100%, 1);
   --color-soft-gray: hsla(220, 14%, 96%, 1);
-  --color-dark-orange: hsl(25, 100%, 39%);
+  --color-dark-orange: #543a26;
 
   --color-primary-blue: hsla(208, 79%, 51%, 1);
   --color-soft-blue: hsla(207, 89%, 68%, 1);

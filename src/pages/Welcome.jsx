@@ -4,14 +4,14 @@ import Footer from "../components/Footer";
 import Logo from "../components/Logo";
 import { useNavigate } from "react-router-dom";
 
-function Welcome() {
+function Welcome({ setOnboarded }) {
   const navigate = useNavigate();
 
-  // const handleStart = ({ setIsOnboarded }) => {
-  //   localStorage.setItem("onboardingComplete", "true");
-  //   setIsOnboarded(true);
-  //   navigate("/home");
-  // };
+  const handleContinue = () => {
+    localStorage.setItem("onboardingComplete", "true");
+    setOnboarded(true);
+    navigate("/sign-up");
+  };
   return (
     <>
       <div className="flex max-[700px]:flex-col">
@@ -35,8 +35,7 @@ function Welcome() {
               className="py-3.75 px-12 text-[16px] rounded-xl font-semibold max-[1000px]:px-8 max-[1000px]:py-2.75 max-[700px]:ml-auto max-[700px]:mt-7"
               textColor="text-primary-blue"
               border="border-2"
-              onClick={() => navigate("/login")}
-              // onClick={handleStart}
+              onClick={handleContinue}
             >
               Sign In
             </Button>
@@ -83,6 +82,7 @@ function Welcome() {
               className="w-full font-semibold text-[16px] leading-6 py-4.75 rounded-xl mt-10"
               bgColor="bg-primary-color"
               textColor="text-white"
+              onClick={handleContinue}
             >
               Start Your Order
             </Button>
