@@ -12,7 +12,7 @@ function Header({ setLoggedIn }) {
       <div className="maxWidth flex items-center justify-between">
         <Logo onClick={() => navigate("/home")} />
         <div className="min-[790px]:hidden">
-          <ToggleMenu />
+          <ToggleMenu setLoggedIn={setLoggedIn} />
         </div>
         <div className="max-[790px]:hidden">
           <PageNav />

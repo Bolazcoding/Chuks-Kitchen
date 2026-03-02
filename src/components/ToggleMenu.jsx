@@ -4,7 +4,7 @@ import { menu } from "ionicons/icons";
 import { close } from "ionicons/icons";
 import MobileNavMenu from "./MobileNavMenu";
 
-function ToggleMenu() {
+function ToggleMenu({ setLoggedIn }) {
   const [IsOpen, setIsOpen] = useState(false);
 
   const toggleMenu = useCallback(() => setIsOpen((open) => !open), []);
@@ -23,7 +23,7 @@ function ToggleMenu() {
         )}
       </div>
 
-      {IsOpen ? <MobileNavMenu /> : ""}
+      {IsOpen ? <MobileNavMenu setLoggedIn={setLoggedIn} /> : ""}
     </>
   );
 }
