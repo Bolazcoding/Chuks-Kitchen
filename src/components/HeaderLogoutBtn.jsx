@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
-function HeaderLoginBtn({ setLoggedIn }) {
+function HeaderLogoutBtn({ setLoggedIn }) {
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -27,4 +27,5 @@ function HeaderLoginBtn({ setLoggedIn }) {
     </Button>
   );
 }
-export default HeaderLoginBtn;
+
+export default HeaderLogoutBtn;

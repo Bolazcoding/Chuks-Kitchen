@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import HeaderLoginBtn from "./HeaderLoginBtn";
+import HeaderLogoutBtn from "./HeaderLogoutBtn";
 import Logo from "./Logo";
 import PageNav from "./PageNav";
 import ToggleMenu from "./ToggleMenu";
@@ -18,7 +18,7 @@ function Header({ setLoggedIn }) {
           <PageNav />
         </div>
         <div className="max-[790px]:hidden">
-          <HeaderLoginBtn setLoggedIn={setLoggedIn} />
+          <HeaderLogoutBtn setLoggedIn={setLoggedIn} />
         </div>
       </div>
     </header>

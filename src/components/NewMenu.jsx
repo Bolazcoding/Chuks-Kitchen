@@ -1,7 +1,10 @@
 import Image from "./Image";
 import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 function NewMenu() {
+  const navigate = useNavigate();
+
   return (
     <section className="mt-25">
       <div className="relative w-full min-h-[85vh] overflow-hidden">
@@ -26,6 +29,7 @@ function NewMenu() {
               bgColor="bg-primary-color"
               textColor="text-white"
               className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold mt-7 hover:bg-soft-orange"
+              onClick={() => navigate("/explore")}
             >
               Discover what's new
             </Button>
