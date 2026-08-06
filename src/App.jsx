@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { KitchenProvider } from "./contexts/KitchenContext";
+import KitchenProvider from "./contexts/KitchenContext";
 import SpinnerFullPage from "./components/SpinnerFullPage";
 
 // import Welcome from "./pages/Welcome";
@@ -23,12 +23,14 @@ function App() {
   const [onboarded, setOnboarded] = useState(false);
   const [signedUp, setSignedUp] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [authResolved, setAuthResolved] = useState(false);
 
   useEffect(function () {
     async function account() {
       setOnboarded(localStorage.getItem("onboardingComplete") === "true");
       setSignedUp(localStorage.getItem("isSignedUp") === "true");
       setLoggedIn(localStorage.getItem("isLoggedIn") === "true");
+      setAuthResolved(true);
     }
     account();
   }, []);
@@ -85,7 +87,9 @@ function App() {
               <Route
                 path="/home"
                 element={
-                  loggedIn ? (
+                  !authResolved ? (
+                    <SpinnerFullPage />
+                  ) : loggedIn ? (
                     <HomePage setLoggedIn={setLoggedIn} />
                   ) : (
                     <Navigate to="/login" />

@@ -1,9 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import { useKitchen } from "../contexts/useKitchen";
 import Button from "./Button";
 import Image from "./Image";
 
 function SpecialMeals({ specials }) {
   const navigate = useNavigate();
+  const { addToCart } = useKitchen();
+
+  const handleAddToCart = (special) => {
+    addToCart(special);
+    navigate("/cart");
+  };
 
   return (
     <div className="grid grid-cols-3 gap-12 w-fit mt-12 max-[950px]:grid-cols-2 max-[950px]:justify-between max-[600px]:grid-cols-1">
@@ -36,10 +43,10 @@ function SpecialMeals({ specials }) {
                 {special.price}
               </p>
               <Button
-                onClick={() => navigate("/cart")}
-                bgColor="bg-primary-color"
+                onClick={() => handleAddToCart(special)}
+                bgColor="bg-[var(--color-primary-color)]"
                 textColor="text-white"
-                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold hover:bg-soft-orange max-[1150px]:px-8 max-[1150px]:py-2.75"
+                className="py-3.75 px-12 text-[16px] leading-6 rounded-lg font-semibold transition-colors duration-150 hover:bg-soft-orange max-[1150px]:px-8 max-[1150px]:py-2.75"
               >
                 Add to cart
               </Button>

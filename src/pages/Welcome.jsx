@@ -107,7 +107,7 @@ function Welcome({ setOnboarded }) {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

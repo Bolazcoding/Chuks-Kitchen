@@ -3,9 +3,15 @@ import Button from "./Button";
 import { IonIcon } from "@ionic/react";
 import { add } from "ionicons/icons";
 import { useNavigate } from "react-router-dom";
+import { useKitchen } from "../contexts/useKitchen";
 
 function PopularMenuCat({ popularMeals }) {
   const navigate = useNavigate();
+  const { addToCart } = useKitchen();
+
+  const handleAddToCart = (meal) => {
+    addToCart(meal);
+  };
 
   return (
     <div className="grid grid-cols-3 gap-12 w-full mt-12 max-[950px]:grid-cols-2 max-[950px]:justify-between max-[600px]:grid-cols-1 max-[600px]:px-2 max-[600px]:gap-8">
@@ -24,7 +30,7 @@ function PopularMenuCat({ popularMeals }) {
           <div className="py-7 px-4 w-full max-[600px]:px-2 max-[600px]:py-2">
             <div>
               <h3
-                className=" text-text-color text-2xl font-semibold leading-8.5 max-[600px]:text-[16px] max-[600px]:leading-6 cursor-pointer hover:text-primary-color"
+                className="text-text-color text-2xl font-semibold leading-8.5 max-[600px]:text-[16px] max-[600px]:leading-6 cursor-pointer hover:text-primary-color"
                 onClick={() => navigate("/foodDetails")}
               >
                 {popularMeal.title}
@@ -38,11 +44,12 @@ function PopularMenuCat({ popularMeals }) {
                 {popularMeal.price}
               </p>
               <Button
-                onClick={() => navigate("/cart")}
-                bgColor="bg-primary-color"
-                className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-soft-orange max-[600px]:w-5 max-[600px]:h-5"
+                onClick={() => handleAddToCart(popularMeal)}
+                bgColor="bg-[var(--color-primary-color)]"
+                textColor="text-white"
+                className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-soft-orange transition-colors duration-150 max-[600px]:w-5 max-[600px]:h-5"
               >
-                <IonIcon icon={add} className="text-white text-3xl " />
+                <IonIcon icon={add} className="text-white text-3xl" />
               </Button>
             </div>
           </div>

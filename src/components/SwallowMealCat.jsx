@@ -2,8 +2,15 @@ import Image from "./Image";
 import Button from "./Button";
 import { IonIcon } from "@ionic/react";
 import { add } from "ionicons/icons";
+import { useKitchen } from "../contexts/useKitchen";
 
 function SwallowMealCat({ swallowMeals }) {
+  const { addToCart } = useKitchen();
+
+  const handleAddToCart = (meal) => {
+    addToCart(meal);
+  };
+
   return (
     <div className="grid grid-cols-3 gap-12 w-full mt-8 max-[950px]:grid-cols-2 max-[950px]:justify-between max-[600px]:grid-cols-1 max-[600px]:px-2 max-[600px]:gap-8">
       {swallowMeals.map((swallowMeal) => (
@@ -30,8 +37,10 @@ function SwallowMealCat({ swallowMeals }) {
                 {swallowMeal.price}
               </p>
               <Button
-                bgColor="bg-primary-color"
-                className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-soft-orange max-[600px]:w-5 max-[600px]:h-5"
+                onClick={() => handleAddToCart(swallowMeal)}
+                bgColor="bg-[var(--color-primary-color)]"
+                textColor="text-white"
+                className="rounded-full w-8 h-8 flex items-center justify-center hover:bg-soft-orange transition-colors duration-150 max-[600px]:w-5 max-[600px]:h-5"
               >
                 <IonIcon icon={add} className="text-white text-3xl " />
               </Button>

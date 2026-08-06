@@ -33,7 +33,7 @@ function SignIn({ setLoggedIn }) {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

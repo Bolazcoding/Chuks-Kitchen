@@ -35,7 +35,7 @@ function SignUp({ setSignedUp, setLoggedIn }) {
           </div>
         </div>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

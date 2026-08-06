@@ -1,12 +1,20 @@
 import HeaderText from "./HeaderText";
-import { carts } from "../data/cart";
 import CartDetails from "./CartDetails";
+import { useKitchen } from "../contexts/useKitchen";
 
 function CartMenu() {
+  const { cartItems } = useKitchen();
+
   return (
-    <section className="maxWidth bg-white border-[0.5px] border-icon-text/30 rounded-[5px] px-3 py-6 my-25 max-[630px]:my-12">
-      <HeaderText>Your Cart</HeaderText>
-      <CartDetails carts={carts} />
+    <section className="maxWidth mx-auto max-w-6xl bg-white border-[0.5px] border-icon-text/30 rounded-[10px] px-6 py-8 my-25 max-[950px]:px-4 max-[630px]:px-3 max-[630px]:py-6 max-[630px]:my-12">
+      <HeaderText className="mb-4">Your Cart</HeaderText>
+      {cartItems.length === 0 ? (
+        <p className="text-text-color text-[18px] leading-7 font-medium mt-6">
+          Your cart is empty. Add a meal to get started.
+        </p>
+      ) : (
+        <CartDetails carts={cartItems} />
+      )}
     </section>
   );
 }

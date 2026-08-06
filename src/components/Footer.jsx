@@ -76,9 +76,13 @@ function Footer() {
         <p className="footerNavText">
           &copy; 2020 Lift Media. All rights reserved.
         </p>
-        <div className="bg-primary-blue p-3 rounded-full w-12 h-12 flex items-center justify-center max-[700px]:mt-6 max-[700px]:w-10 max-[700px]:h-10">
+        <button
+          type="button"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="bg-primary-blue p-3 rounded-full w-12 h-12 flex items-center justify-center max-[700px]:mt-6 max-[700px]:w-10 max-[700px]:h-10"
+        >
           <IonIcon icon={arrowUp} className="text-white text-2xl" />
-        </div>
+        </button>
       </div>
     </footer>
   );
