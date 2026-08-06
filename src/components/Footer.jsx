@@ -74,7 +74,7 @@ function Footer() {
       </div>
       <div className="flex items-center justify-between mt-10 max-[700px]:flex-col">
         <p className="footerNavText">
-          &copy; 2020 Lift Media. All rights reserved.
+          © {new Date().getFullYear()} Lift Media. All rights reserved.
         </p>
         <button
           type="button"

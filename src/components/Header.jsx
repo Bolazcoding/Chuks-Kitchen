@@ -16,11 +16,12 @@ function Header({ setLoggedIn }) {
     <header className="sticky top-0 z-50 bg-white shadow-md py-4">
       <div className="maxWidth flex items-center justify-between">
         <Logo onClick={() => navigate("/home")} />
-        <div className="min-[790px]:hidden">
-          <ToggleMenu setLoggedIn={setLoggedIn} />
-        </div>
-        <div className="max-[790px]:hidden flex items-center gap-4">
-          <PageNav />
+
+        <div className="flex items-center gap-4">
+          <div className="max-[790px]:hidden">
+            <PageNav />
+          </div>
+
           <button
             type="button"
             onClick={() => navigate("/cart")}
@@ -33,7 +34,14 @@ function Header({ setLoggedIn }) {
               </span>
             )}
           </button>
-          <HeaderLogoutBtn setLoggedIn={setLoggedIn} />
+
+          <div className="max-[790px]:hidden">
+            <HeaderLogoutBtn setLoggedIn={setLoggedIn} />
+          </div>
+
+          <div className="min-[790px]:hidden">
+            <ToggleMenu setLoggedIn={setLoggedIn} />
+          </div>
         </div>
       </div>
     </header>

@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 import Image from "./Image";
+import Search from "./Search";
 
 function Hero() {
   const navigate = useNavigate();
@@ -10,15 +11,12 @@ function Hero() {
       <Image
         src="/images/Welcome.svg"
         alt="hero-img"
-        // width={1075}
-        // height={589}
-        // className="absolute object-cover"
         className="absolute inset-0 w-full h-full object-cover"
       />
 
       <div className="absolute inset-0 bg-text-color/50"></div>
 
-      <div className="maxWidth relative z-10 flex items-center h-full mt-45 max-[510px]:mt-55">
+      <div className="maxWidth relative z-10 flex flex-col justify-center h-full mt-45 pb-40 max-[510px]:mt-55 max-[510px]:pb-32">
         <div className="max-w-3xl">
           <h1 className="text-white text-5xl font-bold leading-15.25 max-[510px]:text-[32px] max-[510px]:leading-10">
             The Heart of Nigerian Home Cooking
@@ -34,6 +32,12 @@ function Hero() {
           >
             Discover what's new
           </Button>
+        </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 z-20 w-full">
+        <div className="maxWidth">
+          <Search />
         </div>
       </div>
     </div>

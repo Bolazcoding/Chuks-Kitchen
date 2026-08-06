@@ -5,7 +5,6 @@ import ChefSpecial from "../components/ChefSpecial";
 import Main from "./Main";
 import PopularCategories from "../components/PopularCategories";
 import NewMenu from "../components/NewMenu";
-import Search from "../components/Search";
 
 function HomePage({ setLoggedIn }) {
   return (
@@ -13,7 +12,6 @@ function HomePage({ setLoggedIn }) {
       <Header setLoggedIn={setLoggedIn} />
       <Main>
         <Hero />
-        <Search />
         <PopularCategories />
         <ChefSpecial />
         <NewMenu />
