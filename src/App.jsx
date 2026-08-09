@@ -18,6 +18,8 @@ const HomePage = lazy(() => import("./pages/HomePage"));
 const MenuPage = lazy(() => import("./pages/MenuPage"));
 const FoodDetails = lazy(() => import("./pages/FoodDetails"));
 const Cart = lazy(() => import("./pages/Cart"));
+const Checkout = lazy(() => import("./pages/Checkout"));
+const Success = lazy(() => import("./pages/Success"));
 
 function App() {
   const [onboarded, setOnboarded] = useState(false);
@@ -107,6 +109,14 @@ function App() {
               <Route
                 path="/cart"
                 element={<Cart setLoggedIn={setLoggedIn} />}
+              />
+              <Route
+                path="/checkout"
+                element={<Checkout setLoggedIn={setLoggedIn} />}
+              />
+              <Route
+                path="/success"
+                element={<Success setLoggedIn={setLoggedIn} />}
               />
             </Routes>
           </Suspense>

@@ -9,9 +9,7 @@ function KitchenProvider({ children }) {
       const existingItem = prevItems.find((prev) => prev.id === item.id);
       if (existingItem) {
         return prevItems.map((prev) =>
-          prev.id === item.id
-            ? { ...prev, quantity: prev.quantity + 1 }
-            : prev
+          prev.id === item.id ? { ...prev, quantity: prev.quantity + 1 } : prev,
         );
       }
       return [...prevItems, { ...item, quantity: 1 }];
@@ -24,9 +22,9 @@ function KitchenProvider({ children }) {
         .map((item) =>
           item.id === itemId
             ? { ...item, quantity: Math.max(1, item.quantity + delta) }
-            : item
+            : item,
         )
-        .filter((item) => item.quantity > 0)
+        .filter((item) => item.quantity > 0),
     );
   };
 
@@ -34,9 +32,13 @@ function KitchenProvider({ children }) {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
   };
 
+  const clearCart = () => {
+    setCartItems([]);
+  };
+
   const value = useMemo(
-    () => ({ cartItems, addToCart, updateQuantity, removeFromCart }),
-    [cartItems]
+    () => ({ cartItems, addToCart, updateQuantity, removeFromCart, clearCart }),
+    [cartItems],
   );
 
   return (

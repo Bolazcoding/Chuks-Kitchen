@@ -1,8 +1,12 @@
+import { useNavigate } from "react-router-dom";
 import HeaderText from "./HeaderText";
 import CartDetails from "./CartDetails";
+import CartSummary from "./CartSummary";
+import Button from "./Button";
 import { useKitchen } from "../contexts/useKitchen";
 
 function CartMenu() {
+  const navigate = useNavigate();
   const { cartItems } = useKitchen();
 
   return (
@@ -13,7 +17,19 @@ function CartMenu() {
           Your cart is empty. Add a meal to get started.
         </p>
       ) : (
-        <CartDetails carts={cartItems} />
+        <>
+          <CartDetails carts={cartItems} />
+          <CartSummary cartItems={cartItems}>
+            <Button
+              onClick={() => navigate("/checkout")}
+              bgColor="bg-primary-color"
+              textColor="text-white"
+              className="w-full rounded-lg py-3 text-[16px] font-semibold hover:bg-soft-orange"
+            >
+              Proceed to checkout
+            </Button>
+          </CartSummary>
+        </>
       )}
     </section>
   );
