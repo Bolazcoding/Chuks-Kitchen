@@ -1,8 +1,24 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { KitchenContext } from "./KitchenContextValue";
 
 function KitchenProvider({ children }) {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState(() => {
+    if (typeof window === "undefined") return [];
+    try {
+      const saved = window.localStorage.getItem("cartItems");
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  useEffect(() => {
+    try {
+      window.localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    } catch {
+      // ignore localStorage write failures
+    }
+  }, [cartItems]);
 
   const addToCart = (item) => {
     setCartItems((prevItems) => {
